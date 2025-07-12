@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Interactiva DIS - FADU</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .anio {
+      background-color: #bbdefb;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .materia {
+      background-color: #90caf9;
+      margin: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .materia:hover {
+      background-color: #64b5f6;
+    }
+    .materia.aprobada {
+      background-color: #1976d2;
+      color: white;
+      text-decoration: line-through;
+    }
+    .materia.bloqueada {
+      background-color: #cfd8dc;
+      color: #757575;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Interactiva - Diseño de Imagen y Sonido (FADU)</h1>
+
+  <div class="anio"><h2>CBC</h2>
+    <div class="materia" data-nombre="Introducción al Pensamiento Científico">Introducción al Pensamiento Científico</div>
+    <div class="materia" data-nombre="Introducción al Conocimiento de la Sociedad y el Estado">Introducción al Conocimiento de la Sociedad y el Estado</div>
+    <div class="materia" data-nombre="Conocimiento Proyectual 1">Conocimiento Proyectual 1</div>
+    <div class="materia" data-nombre="Conocimiento Proyectual 2">Conocimiento Proyectual 2</div>
+    <div class="materia" data-nombre="Matemática">Matemática</div>
+    <div class="materia" data-nombre="Taller de Dibujo">Taller de Dibujo</div>
+    <div class="materia" data-nombre="Semiólogía">Semiólogía</div>
+  </div>
+
+  <div class="anio"><h2>1er Año</h2>
+    <div class="materia bloqueada" data-nombre="Proyecto Audiovisual 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Proyecto Audiovisual 1</div>
+    <div class="materia bloqueada" data-nombre="Narrativas Audiovisuales" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Narrativas Audiovisuales</div>
+    <div class="materia bloqueada" data-nombre="Escrituras Audiovisuales 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Escrituras Audiovisuales 1</div>
+    <div class="materia bloqueada" data-nombre="Dibujo y Representación Audiovisual" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Dibujo y Representación Audiovisual</div>
+    <div class="materia bloqueada" data-nombre="Montaje 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Montaje 1</div>
+    <div class="materia bloqueada" data-nombre="Iluminación y Cámara 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Iluminación y Cámara 1</div>
+    <div class="materia bloqueada" data-nombre="Sonido 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Sonido 1</div>
+    <div class="materia bloqueada" data-nombre="Estética" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Estética</div>
+    <div class="materia bloqueada" data-nombre="Sociología" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Sociología</div>
+  </div>
+
+  <div class="anio"><h2>2do Año</h2>
+    <div class="materia bloqueada" data-nombre="Proyecto Audiovisual 2" data-requiere="Proyecto Audiovisual 1,Sociología">Proyecto Audiovisual 2</div>
+    <div class="materia bloqueada" data-nombre="Producción y Planificación" data-requiere="Proyecto Audiovisual 1">Producción y Planificación</div>
+    <div class="materia bloqueada" data-nombre="Escrituras Audiovisuales 2" data-requiere="Narrativas Audiovisuales,Escrituras Audiovisuales 1">Escrituras Audiovisuales 2</div>
+    <div class="materia bloqueada" data-nombre="Técnicas Audiovisuales" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Técnicas Audiovisuales</div>
+    <div class="materia bloqueada" data-nombre="Iluminación y Cámara 2" data-requiere="Iluminación y Cámara 1">Iluminación y Cámara 2</div>
+    <div class="materia bloqueada" data-nombre="Sonido 2" data-requiere="Sonido 1">Sonido 2</div>
+    <div class="materia bloqueada" data-nombre="Historia Analítica de los Medios Audiovisuales 1" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Historia Analítica de los Medios Audiovisuales 1</div>
+    <div class="materia bloqueada" data-nombre="Teorías Audiovisuales" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Teorías Audiovisuales</div>
+  </div>
+
+  <div class="anio"><h2>3er Año</h2>
+    <div class="materia bloqueada" data-nombre="Proyecto Audiovisual 3" data-requiere="Proyecto Audiovisual 2,Producción y Planificación,Técnicas Audiovisuales">Proyecto Audiovisual 3</div>
+    <div class="materia bloqueada" data-nombre="Difusión y Comercialización de los Medios" data-requiere="Proyecto Audiovisual 2,Producción y Planificación">Difusión y Comercialización de los Medios</div>
+    <div class="materia bloqueada" data-nombre="Montaje 2" data-requiere="Proyecto Audiovisual 2,Montaje 1">Montaje 2</div>
+    <div class="materia bloqueada" data-nombre="Historia Analítica de los Medios Audiovisuales 2" data-requiere="Historia Analítica de los Medios Audiovisuales 1">Historia Analítica de los Medios Audiovisuales 2</div>
+    <div class="materia bloqueada" data-nombre="Teoría y Estética de los Medios" data-requiere="Introducción al Pensamiento Científico,Introducción al Conocimiento de la Sociedad y el Estado,Conocimiento Proyectual 1,Conocimiento Proyectual 2,Matemática,Taller de Dibujo,Semiólogía">Teoría y Estética de los Medios</div>
+  </div>
+
+  <div class="anio"><h2>4to Año</h2>
+    <div class="materia bloqueada" data-nombre="Proyecto Audiovisual 4" data-requiere="Proyecto Audiovisual 3,Montaje 2,Difusión y Comercialización de los Medios">Proyecto Audiovisual 4</div>
+  </div>
+
+  <script>
+    const materias = document.querySelectorAll('.materia');
+    const estadoMaterias = {};
+
+    materias.forEach(m => {
+      const nombre = m.dataset.nombre;
+      const aprobada = localStorage.getItem(nombre) === 'true';
+      if (aprobada) {
+        m.classList.add('aprobada');
+        m.classList.remove('bloqueada');
+        estadoMaterias[nombre] = true;
+      } else {
+        estadoMaterias[nombre] = false;
+      }
+    });
+
+    function actualizarDisponibilidad() {
+      materias.forEach(m => {
+        const requisitos = m.dataset.requiere;
+        if (requisitos) {
+          const lista = requisitos.split(',');
+          const habilitada = lista.every(req => estadoMaterias[req]);
+          if (habilitada) {
+            m.classList.remove('bloqueada');
+          } else {
+            m.classList.add('bloqueada');
+          }
+        }
+      });
+    }
+
+    materias.forEach(m => {
+      m.addEventListener('click', () => {
+        if (m.classList.contains('bloqueada')) return;
+        m.classList.toggle('aprobada');
+        const nombre = m.dataset.nombre;
+        const aprobada = m.classList.contains('aprobada');
+        localStorage.setItem(nombre, aprobada);
+        estadoMaterias[nombre] = aprobada;
+        actualizarDisponibilidad();
+      });
+    });
+
+    actualizarDisponibilidad();
+  </script>
+</body>
+</html>
